@@ -19,7 +19,7 @@ export class ReservationController {
 
     constructor() {
 
-        console.log("reservation loaded"), ProxyState.reservations;
+        console.log("reservation controller loaded"), ProxyState.reservations;
 
         // _drawReservations()
     }

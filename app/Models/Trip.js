@@ -14,6 +14,8 @@ export class Trip {
     this.name = tripData.name
     this.notes = tripData.notes
 
+    console.log(tripData);
+
   }
 
 
@@ -50,6 +52,7 @@ export class Trip {
               reservation info will injected -->
         <!--NOTE this line draws my reservations to the screen-->
              ${this.Reservations}
+            <!--these divs separate the cards-->
 </div>
         </div>
         
@@ -62,7 +65,7 @@ export class Trip {
   // directly from my reservation id line
 
   get Reservations() {
-    let reservations = ProxyState.reservations
+    let reservations = ProxyState.reservations.filter(r => r.tripId == this.id)
     let template = ''
     reservations.forEach(r => template += r.Template)
 

@@ -31,6 +31,16 @@ class AppState extends EventEmitter {
     address: "21 West Street",
     date: "5-27-2022",
     cost: 20
+  }),
+
+  new Reservation({
+    name: "Southwest",
+    type: "Flight",
+    confirmationNumber: "21gt52",
+    address: "2 Airport Way",
+    date: "4-21-2009",
+    cost: 6
+
   })
 
   ]

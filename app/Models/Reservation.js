@@ -13,7 +13,7 @@ export class Reservation {
       this.name = data.name,
       this.confirmationNumber = data.confirmationNumber,
       this.address = data.address,
-      this.data = data.date,
+      this.date = new Date(data.date),
       this.cost = data.cost
   }
 
