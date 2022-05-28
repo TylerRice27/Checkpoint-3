@@ -10,8 +10,10 @@ export class Trip {
 
 
   constructor(tripData) {
-    this.id = tripData.id || generateId()
-    this.name = tripData.name
+
+
+    this.id = tripData.id || generateId(),
+      this.name = tripData.name
     this.notes = tripData.notes
 
     console.log(tripData, this.id);
@@ -65,7 +67,7 @@ export class Trip {
   // directly from my reservation id line
 
   get Reservations() {
-    let reservations = ProxyState.reservations.filter(r => r.tripId == this.id)
+    let reservations = ProxyState.reservations
     let template = ''
     reservations.forEach(r => template += r.Template)
 

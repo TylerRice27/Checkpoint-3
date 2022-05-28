@@ -1,6 +1,7 @@
 import { Reservation } from "./Models/Reservation.js"
 import { Trip } from "./Models/Trip.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
+import { generateId } from "./Utils/generateId.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
@@ -10,12 +11,14 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Trip').Trip[]} */
 
   trips = [new Trip({
+
     name: "Disneyland",
     notes: "this trip is cool. Wish I could go"
 
   }),
 
   new Trip({
+
     name: "West Coast Beach",
     notes: "A sandy Trip!!!"
   })
@@ -25,6 +28,7 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Reservation').Reservation[]} */
 
   reservations = [new Reservation({
+
     name: "Enterprise",
     type: "Car",
     confirmationNumber: "ljl637",
@@ -34,6 +38,7 @@ class AppState extends EventEmitter {
   }),
 
   new Reservation({
+
     name: "Southwest",
     type: "Flight",
     confirmationNumber: "21gt52",

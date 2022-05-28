@@ -29,7 +29,8 @@
     <form class="card col-md-4 shadow p-3 m-2">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Trip Name</label>
-        <input placeholder="Germany" type="text" class="form-control" id="tripname" aria-describedby="emailHelp">
+        <input placeholder="Germany" type="text" class="form-control" name="tripname" id="tripname"
+          aria-describedby="emailHelp">
         <div id="triphelp" class="form-text">Create a new trip by entering here.</div>
       </div>
 
@@ -102,6 +103,31 @@
 
 
     </div>
+
+    <!-- My form for my reservations is here to items -->
+    <form class="card row shadow p-3 m-2">
+      <div class="col-md-12 p-2 m-2">
+
+        <label for="type" class="form-label">Type</label>
+        <input type="text" class="form-control" name="type" id="type" aria-describedby="emailHelp">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp">
+        <label for="confirmation-number" class="form-label">Confirmation Number</label>
+        <input type="text" class="form-control" name="confirmation-number" id="confirmation-number"
+          aria-describedby="emailHelp">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" name="address" id="address" aria-describedby="emailHelp">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" name="date" id="date" aria-describedby="emailHelp">
+        <label for="cost" class="form-label">Cost</label>
+        <input type="number" class="form-control" name="cost" id="cost" aria-describedby="emailHelp">
+
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
   </main>
   <footer class="bg-dark text-light">
     <div class="text-center no-select">

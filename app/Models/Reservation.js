@@ -48,10 +48,7 @@ export class Reservation {
 
             <div class="col-md-2">
               <p>$${this.cost}</p>
-            </div>
-
-                
-                
+            </div>   
                 
         </div>        
                 `
