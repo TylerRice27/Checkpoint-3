@@ -9,22 +9,22 @@ import { generateId } from "../Utils/generateId.js";
 export class Trip {
 
 
-    constructor(tripData) {
-        this.id = tripData.id || generateId()
-        this.name = tripData.name
-        this.notes = tripData.notes
+  constructor(tripData) {
+    this.id = tripData.id || generateId()
+    this.name = tripData.name
+    this.notes = tripData.notes
 
-    }
+  }
 
 
-    get Template() {
-        return `
+  get Template() {
+    return /*html*/ `
         
       <!-- NOTE this is my trip card containing a new trip and 
       my reservations that I am going to enter -->
      
         <div class="col-12">
-         <div class="card">
+         <div class="card p-3 m-3">
             <h1>${this.name}</h1>
              <div class="row ">
           <div class="col-md-2 mt-3">
@@ -45,29 +45,30 @@ export class Trip {
           <div class="col-md-2 mt-3">
             <p>Cost</p>
           </div>
+          
           <!--This is going to be the row where 
               reservation info will injected -->
         <!--NOTE this line draws my reservations to the screen-->
              ${this.Reservations}
-
+</div>
         </div>
         
         
         
         `
-    }
+  }
 
-    // NOTE this will eventually change to the get Reservations and pull
-    // directly from my reservation id line
+  // NOTE this will eventually change to the get Reservations and pull
+  // directly from my reservation id line
 
-    get Reservations() {
-        let reservations = ProxyState.reservations
-        let template = ''
-        reservations.forEach(r => template += r.Template)
+  get Reservations() {
+    let reservations = ProxyState.reservations
+    let template = ''
+    reservations.forEach(r => template += r.Template)
 
-        return template
-    }
+    return template
+  }
 
-    // document.getElementById("reservations").innerHTML = template
+  // document.getElementById("reservations").innerHTML = template
 
 }
