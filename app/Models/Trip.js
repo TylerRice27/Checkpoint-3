@@ -14,7 +14,7 @@ export class Trip {
     this.name = tripData.name
     this.notes = tripData.notes
 
-    console.log(tripData);
+    console.log(tripData, this.id);
 
   }
 
