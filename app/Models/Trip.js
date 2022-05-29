@@ -98,9 +98,10 @@ export class Trip {
 
   // NOTE this will eventually change to the get Reservations and pull
   // directly from my reservation id line
+  //This is also in charge of my dates sorting
 
   get Reservations() {
-    let reservations = ProxyState.reservations
+    let reservations = ProxyState.reservations.sort((a, b) => a.date - b.date)
     let template = ''
     reservations.forEach(r => template += r.Template)
 
