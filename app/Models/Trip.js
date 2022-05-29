@@ -105,7 +105,7 @@ export class Trip {
   get Reservations() {
     let reservations = ProxyState.reservations.sort((a, b) => a.date - b.date)
     // This line should filter so they join the spefic trip
-    // reservations.filter(r => r.tripId == this.id)
+    reservations.filter(r => r.tripId == this.id)
     let template = ''
     reservations.forEach(r => template += r.Template)
 

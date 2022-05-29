@@ -27,14 +27,14 @@ export class TripsController {
         _drawTrips()
     }
 
-    bookTrip(tripId) {
+    bookTrip() {
         window.event.preventDefault()
         console.log("booking a trip");
         let form = window.event.target
         let tripData = {
 
             name: form.name.value,
-            tripId: generateId()
+
         }
         console.log("tripData", tripData);
         tripsService.bookTrip(tripData)
