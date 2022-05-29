@@ -37,5 +37,18 @@ export class TripsController {
         tripsService.bookTrip(tripData)
     }
 
+    deleteTrip(id) {
+
+        let confirmAction = confirm("Are you sure you want to delete this Trip?");
+        if (confirmAction) {
+
+            tripsService.deleteTrip(id)
+
+        } else {
+
+            alert("Action canceled");
+        }
+    }
+
 
 }

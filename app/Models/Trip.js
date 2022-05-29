@@ -33,10 +33,11 @@ export class Trip {
         <div class="col-12">
          <div class="card shadow p-3 m-3">
             <h1>${this.name}</h1>
+            <button type="button" onclick="app.tripsController.deleteTrip('${this.id}')" class="btn btn-danger">Delete Trip</button>
              <div class="row ">
           <div class="col-md-2 mt-3">
             <p>Type</p>
-            
+
           </div>
           <div class="col-md-2 mt-3">
             <p>Name</p>
@@ -53,8 +54,8 @@ export class Trip {
           <div class="col-md-2 mt-3">
             <p>Cost</p>
           </div>
-          
-          <!--This is going to be the row where 
+
+          <!--This is going to be the row where
               reservation info will injected -->
         <!--NOTE this line draws my reservations to the screen-->
              ${this.Reservations}

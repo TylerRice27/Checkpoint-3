@@ -10,6 +10,14 @@ class TripsService {
         ProxyState.trips = [...ProxyState.trips, new Trip(tripData)]
     }
 
+
+
+
+
+    deleteTrip(id) {
+        ProxyState.trips = ProxyState.trips.filter(p => p.id != id)
+    }
+
 }
 
 
