@@ -31,8 +31,8 @@ export class ReservationController {
         console.log("add reservation item", tripId);
         let form = window.event.target
         let reservationData = {
-            name: form.name.value,
             tripId: tripId,
+            name: form.name.value,
             type: form.type.value,
             //This my confirmation number named number to match id on html
             number: form.number.value,
@@ -44,4 +44,18 @@ export class ReservationController {
         reservationsService.addReservation(reservationData)
     }
 
+    deleteReservation(id) {
+
+        let confirmAction = confirm("Are you sure you want to delete?");
+        if (confirmAction) {
+
+            reservationsService.deleteReservation(id)
+        } else {
+
+            alert("Action canceled");
+        }
+    }
+
+
 }
+

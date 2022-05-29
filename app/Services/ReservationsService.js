@@ -12,7 +12,10 @@ class ReservationService {
         ProxyState.reservations = [...ProxyState.reservations, new Reservation(reservationData)]
     }
 
-
+    deleteReservation(id) {
+        console.log("deleting res", id);
+        ProxyState.reservations = ProxyState.reservations.filter(r => r.id != id)
+    }
 
 }
 
