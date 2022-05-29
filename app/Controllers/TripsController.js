@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js";
 import { tripsService } from "../Services/TripService.js";
 import { generateId } from "../Utils/generateId.js";
+import { loadState, saveState } from "../Utils/LocalStorage.js";
 
 function _drawTrips() {
     let trips = ProxyState.trips
@@ -21,8 +22,10 @@ export class TripsController {
         console.log("Trips controller is loaded", ProxyState.trips);
         ProxyState.on('trips', _drawTrips)
         ProxyState.on('reservations', _drawTrips)
+        ProxyState.on('trips', saveState)
+        // ProxyState.on('reservation', saveState)
 
-
+        loadState()
 
         _drawTrips()
     }
