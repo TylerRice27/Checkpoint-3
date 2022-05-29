@@ -13,8 +13,10 @@ export class Trip {
 
 
     this.id = tripData.id || generateId()
-    this.name = tripData.name
-    this.notes = tripData.notes
+    this.name = tripData.name,
+      this.date = new Date(tripData.date),
+
+      this.notes = tripData.notes
 
     console.log(tripData, this.id);
 

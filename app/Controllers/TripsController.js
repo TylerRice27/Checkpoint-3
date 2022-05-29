@@ -2,7 +2,7 @@ import { ProxyState } from "../AppState.js";
 import { tripsService } from "../Services/TripService.js";
 
 function _drawTrips() {
-    let trips = ProxyState.trips
+    let trips = ProxyState.trips.sort((a, z) => a.date - z.date)
     let template = ''
     trips.forEach(t => template += t.Template)
 

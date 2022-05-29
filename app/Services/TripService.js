@@ -2,12 +2,6 @@ import { ProxyState } from "../AppState.js";
 import { Trip } from "../Models/Trip.js";
 
 
-function _drawTrips() {
-    let trips = ProxyState.trips
-    let template = ''
-    trips.forEach(t => template += t.template)
-
-}
 
 class TripsService {
 
