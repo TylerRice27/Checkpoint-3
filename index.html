@@ -26,15 +26,15 @@
   <main>
     <!-- Make the form -->
 
-    <form class="card col-md-4 shadow p-3 m-2">
+    <form class="card col-md-4 shadow p-3 m-2" onsubmit="app.tripsController.bookTrip()">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Trip Name</label>
-        <input placeholder="Germany" type="text" class="form-control" name="tripname" id="tripname"
-          aria-describedby="emailHelp">
+        <input placeholder="Germany" required minlength="3" maxlength="15" type="text" class="form-control"
+          name="tripname" id="tripname" aria-describedby="emailHelp">
         <div id="triphelp" class="form-text">Create a new trip by entering here.</div>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary">Add a new Trip</button>
     </form>
 
 
@@ -105,16 +105,15 @@
     </div>
 
     <!-- My form for my reservations is here to items -->
-    <form class="card row shadow p-3 m-2">
+    <!-- <form class="card row shadow p-3 m-2">
       <div class="col-md-12 p-2 m-2">
 
         <label for="type" class="form-label">Type</label>
         <input type="text" class="form-control" name="type" id="type" aria-describedby="emailHelp">
         <label for="name" class="form-label">Name</label>
         <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp">
-        <label for="confirmation-number" class="form-label">Confirmation Number</label>
-        <input type="text" class="form-control" name="confirmation-number" id="confirmation-number"
-          aria-describedby="emailHelp">
+        <label for="number" class="form-label">Confirmation Number</label>
+        <input type="text" class="form-control" name="number" id="number" aria-describedby="emailHelp">
         <label for="address" class="form-label">Address</label>
         <input type="text" class="form-control" name="address" id="address" aria-describedby="emailHelp">
         <label for="date" class="form-label">Date</label>
@@ -126,7 +125,12 @@
 
 
       <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </form> -->
+
+
+
+
+
 
   </main>
   <footer class="bg-dark text-light">

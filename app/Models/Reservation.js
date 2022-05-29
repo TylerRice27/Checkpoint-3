@@ -12,10 +12,12 @@ export class Reservation {
     this.tripId = data.tripId
     this.type = data.type
     this.name = data.name
-    this.confirmationNumber = data.confirmationNumber
+    this.number = data.number
     this.address = data.address
     this.date = data.date
     this.cost = data.cost
+
+
   }
 
 
@@ -35,7 +37,7 @@ export class Reservation {
             </div>
 
             <div class="col-md-2">
-              <p>${this.confirmationNumber}</p>
+              <p>${this.number}</p>
             </div>
 
             <div class="col-md-2">

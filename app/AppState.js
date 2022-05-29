@@ -31,7 +31,7 @@ class AppState extends EventEmitter {
 
     name: "Enterprise",
     type: "Car",
-    confirmationNumber: "ljl637",
+    number: "ljl637",
     address: "21 West Street",
     date: "5-27-2022",
     cost: 20
@@ -41,7 +41,7 @@ class AppState extends EventEmitter {
 
     name: "Southwest",
     type: "Flight",
-    confirmationNumber: "21gt52",
+    number: "21gt52",
     address: "2 Airport Way",
     date: "4-21-2009",
     cost: 6

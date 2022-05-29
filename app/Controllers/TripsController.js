@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import { tripsService } from "../Services/TripService.js";
 
 function _drawTrips() {
     let trips = ProxyState.trips
@@ -23,6 +24,17 @@ export class TripsController {
 
 
         _drawTrips()
+    }
+
+    bookTrip() {
+        window.event.preventDefault()
+        console.log("booking a trip");
+        let form = window.event.target
+        let tripData = {
+            name: form.name.value
+        }
+        console.log("tripData", tripData);
+        tripsService.bookTrip(tripData)
     }
 
 

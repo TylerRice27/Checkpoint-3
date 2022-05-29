@@ -12,8 +12,8 @@ export class Trip {
   constructor(tripData) {
 
 
-    this.id = tripData.id || generateId(),
-      this.name = tripData.name
+    this.id = tripData.id || generateId()
+    this.name = tripData.name
     this.notes = tripData.notes
 
     console.log(tripData, this.id);
@@ -28,11 +28,12 @@ export class Trip {
       my reservations that I am going to enter -->
      
         <div class="col-12">
-         <div class="card p-3 m-3">
+         <div class="card shadow p-3 m-3">
             <h1>${this.name}</h1>
              <div class="row ">
           <div class="col-md-2 mt-3">
             <p>Type</p>
+            
           </div>
           <div class="col-md-2 mt-3">
             <p>Name</p>
@@ -54,10 +55,40 @@ export class Trip {
               reservation info will injected -->
         <!--NOTE this line draws my reservations to the screen-->
              ${this.Reservations}
-            <!--these divs separate the cards-->
+           
+<!--This is for my reservation form -->
+<div class="row">
+<!--Dont forget the s on reservationscontroller -->
+           <form class="reservation-form" onsubmit="app.reservationsController.addReservation('${this.id}')">
+      <div class="col-md-12 p-2 m-2">
+
+        <label for="type"  required class="form-label">Type</label>
+        <input type="text" required  class="form-control" name="type" id="type" aria-describedby="emailHelp">
+        <label for="name" required  class="form-label">Name</label>
+        <input type="text" required  class="form-control" name="name" id="name" aria-describedby="emailHelp">
+        <label for="number" required  class="form-label">Confirmation Number</label>
+        <input type="text" required  class="form-control" name="number" id="number" aria-describedby="emailHelp">
+        <label for="address" required  class="form-label">Address</label>
+        <input type="text" required  class="form-control" name="address" id="address" aria-describedby="emailHelp">
+        <label for="date"  required class="form-label">Date</label>
+        <input type="date"  required class="form-control" name="date" id="date" aria-describedby="emailHelp">
+        <label for="cost"  required class="form-label">Cost</label>
+        <input type="number"  required class="form-control" name="cost" id="cost" aria-describedby="emailHelp">
+
+      </div> 
+
+
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+            </div>
+
+  <!--these divs separate the cards-->
 </div>
         </div>
         
+</div>
+
+
         
         
         `
