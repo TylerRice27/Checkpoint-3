@@ -23,7 +23,7 @@ export class TripsController {
         ProxyState.on('trips', _drawTrips)
         ProxyState.on('reservations', _drawTrips)
         ProxyState.on('trips', saveState)
-        // ProxyState.on('reservation', saveState)
+        ProxyState.on('reservations', saveState)
 
         loadState()
 

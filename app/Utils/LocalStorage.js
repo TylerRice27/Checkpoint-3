@@ -8,7 +8,6 @@ import { Trip } from "../Models/Trip.js";
 
 
 export function saveState() {
-
     console.log("saving my data to local storage");
 
     let data = {
