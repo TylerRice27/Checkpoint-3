@@ -3,3 +3,11 @@ body {
     /* background-color: teal; */
     background-image: url("../img/mike-swigunski-k9Zeq6EH_bk-unsplash.jpg");
 }
+
+.cal {
+    transform: scale(0.90);
+}
+
+.ad {
+    padding-left: 37px;
+}

@@ -53,11 +53,10 @@ export class Reservation {
 
             <div class="col-md-2 p-1 ps-4">
               <p>$${this.cost}</p>
-             
-               
             </div>
-                 <div class="col-md-2 m-2 p-2">
-           <button type="button" onclick="app.reservationsController.deleteReservation('${this.id}')" class="btn btn-danger">Delete Reservation</button>
+
+            <div class="col-md-1">
+           <button type="button" onclick="app.reservationsController.deleteReservation('${this.id}')" class="btn btn-danger btn btn-small">Delete Reservation</button>
            </div>
              
           </div>   
