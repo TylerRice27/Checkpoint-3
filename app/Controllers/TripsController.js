@@ -43,6 +43,7 @@ export class TripsController {
         }
         console.log("tripData", tripData);
         tripsService.bookTrip(tripData)
+
     }
 
 
