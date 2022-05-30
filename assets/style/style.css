@@ -11,3 +11,8 @@ body {
 .ad {
     padding-left: 37px;
 }
+
+textarea {
+    width: 363px;
+    height: 159px;
+}

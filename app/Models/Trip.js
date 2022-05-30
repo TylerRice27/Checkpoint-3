@@ -95,7 +95,7 @@ export class Trip {
         </div>
         <div class="row">
           <h3>Notes</h3>
-          <div class= "col-md-6" > 
+          <div class= "col-md-6 " > 
           <textarea placeholder="notes here!"
             onblur="app.tripsController.updateTripNotes('${this.id}')">${this.notes}
           </textarea>
