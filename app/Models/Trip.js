@@ -13,7 +13,7 @@ export class Trip {
 
 
     this.id = tripData.id || generateId()
-    this.tripId = tripData.tripId
+    // this.tripId = tripData.tripId
     this.name = tripData.name,
       this.date = new Date(tripData.date),
 
@@ -104,7 +104,7 @@ export class Trip {
           <div class="d-flex justify-content-end col-md-6 mt-5">
           <h1>Total</h1>
           </div>
-          <div class="d-flex justify-content-end col-md-12 me-5 mb-5">
+          <div class="d-flex justify-content-end col-md-12 mb-5">
             <h3>$${this.Total}</h3>
           </div>
 
@@ -124,7 +124,8 @@ export class Trip {
   get Reservations() {
     let reservations = ProxyState.reservations.sort((a, b) => a.date - b.date)
     // This line should filter so they join the spefic trip
-    ProxyState.reservations.filter(r => r.tripId == this.id)
+
+    reservations.filter(r => r.id == this.id)
     let template = ''
     reservations.forEach(r => template += r.Template)
 

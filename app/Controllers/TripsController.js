@@ -2,6 +2,7 @@ import { ProxyState } from "../AppState.js";
 import { tripsService } from "../Services/TripService.js";
 import { generateId } from "../Utils/generateId.js";
 import { loadState, saveState } from "../Utils/LocalStorage.js";
+import { Pop } from "../Utils/Pop.js";
 
 function _drawTrips() {
     let trips = ProxyState.trips
@@ -51,6 +52,7 @@ export class TripsController {
         let textarea = window.event.target
         console.log(textarea.value, id);
         tripsService.updateTripNotes(textarea.value, id)
+        Pop.toast("Notes Added!")
     }
 
     deleteTrip(id) {
