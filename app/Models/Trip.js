@@ -85,6 +85,12 @@ export class Trip {
       <button type="submit" class="btn btn-primary">Add</button>
     </form>
             </div>
+<div class="row">
+<h3>Notes</h3>
+<textarea placeholder="notes here!" onblur="app.tripsController.updateTripNotes('${this.id}')">${this.notes}</textarea>
+
+</div>
+
 
   <!--these divs separate the cards-->
 </div>

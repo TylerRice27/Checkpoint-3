@@ -13,14 +13,14 @@ class AppState extends EventEmitter {
   trips = [new Trip({
 
     name: "Disneyland",
-    notes: "this trip is cool. Wish I could go"
+    notes: ""
 
   }),
 
   new Trip({
 
     name: "West Coast Beach",
-    notes: "A sandy Trip!!!"
+    notes: ""
   })
 
   ]

@@ -38,9 +38,17 @@ export class TripsController {
 
             name: form.name.value,
 
+
         }
         console.log("tripData", tripData);
         tripsService.bookTrip(tripData)
+    }
+
+
+    updateTripNotes(id) {
+        let textarea = window.event.target
+        console.log(textarea.value, id);
+        tripsService.updateTripNotes(textarea.value, id)
     }
 
     deleteTrip(id) {
