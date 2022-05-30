@@ -12,6 +12,7 @@ export class Reservation {
     this.id = data.id || generateId()
     //this line tripId might be need to be taken out
     //I think it has to do with matching trips with reservations
+    //NOTE this needs to stay for the total price of my reservations
     this.tripId = data.tripId
     this.type = data.type
     this.name = data.name
@@ -20,6 +21,7 @@ export class Reservation {
     this.date = new Date(data.date)
     this.cost = data.cost
 
+    // console.log(data.tripId);
     // let reservation = ProxyState.reservations.sort(a, z => a.date - z.date)
   }
 

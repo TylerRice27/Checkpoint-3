@@ -38,7 +38,7 @@ export class TripsController {
         let tripData = {
 
             name: form.name.value,
-            id: generateId()
+
 
 
         }
