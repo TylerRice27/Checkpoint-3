@@ -13,10 +13,12 @@ export class Trip {
 
 
     this.id = tripData.id || generateId()
-    // this.tripId = tripData.tripId
+    this.tripId = tripData.tripId
     this.name = tripData.name,
       this.date = new Date(tripData.date),
 
+      //come back to this to fix undefined in notes section
+      //when first creating a trip
       this.notes = tripData.notes
 
     console.log(tripData);
@@ -30,7 +32,7 @@ export class Trip {
       <!-- NOTE this is my trip card containing a new trip and 
       my reservations that I am going to enter -->
      
-        <div class="col-12">
+       
          <div class="card shadow p-3 m-3">
             <h1>${this.name}</h1>
             <button type="button" onclick="app.tripsController.deleteTrip('${this.id}')" class="btn btn-danger">Delete Trip</button>
@@ -84,6 +86,7 @@ export class Trip {
 
       <button type="submit" class="btn btn-primary">Add</button>
     </form>
+   
             </div>
 <div class="row">
 <h3>Notes</h3>
@@ -111,7 +114,7 @@ export class Trip {
   get Reservations() {
     let reservations = ProxyState.reservations.sort((a, b) => a.date - b.date)
     // This line should filter so they join the spefic trip
-    reservations.filter(r => r.tripId == this.id)
+    ProxyState.reservations.filter(r => r.tripId == this.id)
     let template = ''
     reservations.forEach(r => template += r.Template)
 
@@ -119,5 +122,15 @@ export class Trip {
   }
 
   // document.getElementById("reservations").innerHTML = template
+
+
+  get Total() {
+    let reservations = ProxyState.reservations.filter(r => r.tripId == this.id)
+    let subTotal = 0
+    reservations.forEach(r => subTotal += parseInt(r.price))
+    return subTotal
+
+  }
+
 
 }

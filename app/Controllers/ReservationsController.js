@@ -38,7 +38,8 @@ export class ReservationController {
             number: form.number.value,
             address: form.address.value,
             date: form.date.value,
-            cost: form.cost.value
+            cost: form.cost.value,
+
         }
         console.log(reservationData);
         reservationsService.addReservation(reservationData)

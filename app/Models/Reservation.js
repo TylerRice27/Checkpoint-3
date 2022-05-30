@@ -10,7 +10,9 @@ export class Reservation {
   constructor(data) {
 
     this.id = data.id || generateId()
-    // this.tripId = data.tripId
+    //this line tripId might be need to be taken out
+    //I think it has to do with matching trips with reservations
+    this.tripId = data.tripId
     this.type = data.type
     this.name = data.name
     this.number = data.number
@@ -27,7 +29,7 @@ export class Reservation {
   get Template() {
     return `
                 
-        <div class="row ">
+        <div class="row p-3 m-1">
             <div class="col-md-2">
               <p>${this.type}</p>
             </div>
@@ -51,10 +53,15 @@ export class Reservation {
 
             <div class="col-md-2">
               <p>$${this.cost}</p>
-            </div>   
+              <h6 class="mt-5">Total Cost</h6>
+               
+            </div>
                  <div class="col-md-2 m-2 p-2">
            <button type="button" onclick="app.reservationsController.deleteReservation('${this.id}')" class="btn btn-danger">Delete Reservation</button>
+           </div>
+             
             </div>   
+            
         </div>        
                 `
   }
