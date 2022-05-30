@@ -29,40 +29,40 @@ export class Reservation {
   get Template() {
     return `
                 
-        <div class="row p-3 m-1">
-            <div class="col-md-2">
+        <div class="row p-3 ">
+            <div class="col-md-2 p-1">
               <p>${this.type}</p>
             </div>
 
 
-            <div class="col-md-2">
+            <div class="col-md-2 p-1">
               <p>${this.name}</p>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 p-1">
               <p>${this.number}</p>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 p-1">
               <p>${this.address}</p>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 p-1">
               <p>${this.date.toDateString()}</p>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 p-1 ps-4">
               <p>$${this.cost}</p>
-              <h6 class="mt-5">Total Cost</h6>
+             
                
             </div>
                  <div class="col-md-2 m-2 p-2">
            <button type="button" onclick="app.reservationsController.deleteReservation('${this.id}')" class="btn btn-danger">Delete Reservation</button>
            </div>
              
-            </div>   
+          </div>   
             
-        </div>        
+          
                 `
   }
 
