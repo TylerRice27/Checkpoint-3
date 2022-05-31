@@ -13,8 +13,8 @@ export class Trip {
 
 
     this.id = tripData.id || generateId()
-    this.tripId = tripData.tripId
-    this.name = tripData.name,
+    this.tripId = tripData.tripId,
+      this.name = tripData.name,
       this.date = new Date(tripData.date),
 
       //come back to this to fix undefined in notes section
@@ -122,7 +122,7 @@ export class Trip {
   //This is also in charge of my dates sorting
 
   get Reservations() {
-    let reservations = ProxyState.reservations.sort((a, b) => a.date - b.date)
+    let reservations = ProxyState.reservations.sort((a, z) => a.date - z.date)
     // This line should filter so they join the spefic trip
 
     reservations.filter(r => r.tripId == this.id)
