@@ -19,7 +19,7 @@ export class Trip {
 
       //come back to this to fix undefined in notes section
       //when first creating a trip
-      this.notes = tripData.notes
+      this.notes = tripData.notes || "Notes Here!"
 
     console.log(tripData);
 
@@ -122,10 +122,10 @@ export class Trip {
   //This is also in charge of my dates sorting
 
   get Reservations() {
-    let reservations = ProxyState.reservations.sort((a, z) => a.date - z.date)
-    // This line should filter so they join the spefic trip
+    // This line filter so they join the spefic trip
+    let reservations = ProxyState.reservations.filter(r => r.tripId == this.id)
+    reservations.sort((a, z) => a.date - z.date)
 
-    reservations.filter(r => r.tripId == this.id)
     let template = ''
     reservations.forEach(r => template += r.Template)
 

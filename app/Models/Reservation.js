@@ -21,7 +21,8 @@ export class Reservation {
     this.date = new Date(data.date)
     this.cost = data.cost
 
-    // console.log(data.tripId);
+
+    console.log(data.tripId);
     // let reservation = ProxyState.reservations.sort(a, z => a.date - z.date)
   }
 
